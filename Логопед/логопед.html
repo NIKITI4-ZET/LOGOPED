@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+   <p id="time">Time:60</p>
+    <p id="word"></p>
+    <p id="correct"></p>
+    <p id="incorrect"></p>
+
+   <input id="input" type="text">
+
+   <button id="pr" onclick="tap()">Принять</button>
+
+<body>
+    <script>
+        var time=0
+        let correct=0
+        let incorrect=0
+        let second=10
+        let interval
+        let counter=0
+        let list=["А", "Б","В","Г","Д","Ж","И","К","Л","М"]
+
+        function tap() {
+            console.log(document.getElementById("word").innerText == document.getElementById("input").value)
+            if(document.getElementById("word").innerText == document.getElementById("input").value){
+                random=Math.floor(Math.random()*9)+1
+                document.getElementById("word").innerText = list[random]
+
+            }
+
+        }
+
+//        function click1() {
+//            if (counter == 0) {
+//                document.getElementById("word").innerHTML = list[counter]
+//                counter++
+//                if (interval == undefined) {
+//                    interval = setInterval(timer, 1000)
+//                }
+//            }
+//        }
+//
+//            }function timer() {
+//            second--
+//            document.getElementById("time").innerHTML = second
+//            if (second==0){
+//                clearInterval(interval)
+//        }
+    </script>
+</body>
+</html>
